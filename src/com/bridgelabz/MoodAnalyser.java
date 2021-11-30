@@ -3,9 +3,8 @@ package com.bridgelabz;
 public class MoodAnalyser {
 	public static String message;
 	public static MoodAnalyser instance;
-	
 
-	 MoodAnalyser(String message) {
+	MoodAnalyser(String message) {
 		this.message = message;
 	}
 
@@ -18,14 +17,13 @@ public class MoodAnalyser {
 
 	public String analyse_Mood() {
 		try {
-			if(message.toLowerCase().contains("sad")) {
+			if (message.toLowerCase().contains("sad"))
 				return "SAD";
-			}else {
-				return "HAPPY";
-			}
-			}catch(Exception ex) {
-				return "Empty String";
-			}
+
+		} catch (Exception ex) {
+			return "HAPPY";
 		}
+		return null;
+	}
 
 }
