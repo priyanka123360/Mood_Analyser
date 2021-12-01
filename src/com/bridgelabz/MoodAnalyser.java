@@ -22,18 +22,14 @@ public class MoodAnalyser {
 			if (message == null) {
 				throw new MoodAnalysisException(Mood.NULL_MOOD, "Null MooD");
 			}
-			if (message == "SAD") {
-				throw new MoodAnalysisException(Mood.SAD_MOOD, "SAD MOOD");
-			}
-			if (message == "SAD") {
-				throw new MoodAnalysisException(Mood.HAPPY_MOOD, "HAPPY MOOD");
-			}
-			if (message.toLowerCase().contains("sad"))
+			
+			if (message.toLowerCase().contains("sad")) {
 
 				message = "SAD";
-			else
+			}else {
 				message = "HAPPY";
 			return message;
+			}
 		} catch (MoodAnalysisException e) {
 
 			System.out.print(e);
